@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.MainActivity">
+
+    <ImageView
+        android:id="@+id/gradHat"
+        android:layout_width="275dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/ic_baseline_school_24"
+        app:layout_constraintBottom_toTopOf="@id/termList"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Welcome to WGU Term Scheduler!"
+        app:layout_constraintBottom_toTopOf="@id/gradHat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/termList"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#F4F3F3"
+        android:onClick="toTermList"
+        android:text="Term List"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gradHat" />
+
+    <Button
+        android:id="@+id/courseList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toCourseList"
+        android:text="Course List"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termList" />
+
+    <Button
+        android:id="@+id/assessmentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="toAssessmentList"
+        android:text="Assessment List"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/courseList" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
